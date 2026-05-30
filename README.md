@@ -9,15 +9,11 @@
  ╚══════╝╚═╝  ╚═╝╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═══╝╚══════╝
 ```
 
-**AI-Augmented Engineer** · Красноярск
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3000&pause=1000&color=BA6D4B&center=true&vCenter=true&width=500&lines=AI-Augmented+Engineer;%D0%A1%D1%82%D1%80%D0%BE%D1%8E+%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%2C+%D0%B0+%D0%BD%D0%B5+%D0%BF%D0%B8%D1%88%D1%83+%D0%BA%D0%BE%D0%B4;Python+%C2%B7+TypeScript+%C2%B7+Go;Krasnoyarsk%2C+Russia" alt="Typing SVG" /></a>
 
 *«Иногда история и тепло, одного осколка огня бывает удивительнее и жарче, чем пламя целого кострища»*
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
-<img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux" />
+<img src="https://skillicons.dev/icons?i=python,typescript,go,docker,linux,nextjs,react,postgres,redis,bash&theme=light" alt="Tech Stack" />
 
 </div>
 
@@ -25,8 +21,8 @@
 
 ### О себе
 
-Строю полноценные продукты с нуля — от идеи до деплоя.
-Поднимаю инфраструктуру, проектирую архитектуру, пишу код.
+Строю полноценные продукты с нуля — от идеи до деплоя.  
+Поднимаю инфраструктуру, проектирую архитектуру, пишу код.  
 AI усиливает каждый этап: генерация, отладка, автоматизация.
 
 Сейчас работаю с **Python**, присматриваюсь к **Go**, **Ruby** и **C++**.
@@ -55,6 +51,14 @@ AI усиливает каждый этап: генерация, отладка,
 ---
 
 <div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Awoowe123/Awoowe123/blob/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/Awoowe123/Awoowe123/blob/output/github-snake.svg" />
+  <img alt="Snake animation" src="https://github.com/Awoowe123/Awoowe123/blob/output/github-snake.svg" />
+</picture>
+
+---
 
 *build systems, not just code*
 
