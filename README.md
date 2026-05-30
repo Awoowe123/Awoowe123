@@ -11,7 +11,7 @@
 
 **AI-Augmented Engineer** · Красноярск
 
-*Я не пишу код — я строю системы. AI — мой напарник, не инструмент.*
+*«Иногда история и тепло, одного осколка огня бывает удивительнее и жарче, чем пламя целого кострища»*
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
@@ -55,11 +55,6 @@ AI усиливает каждый этап: генерация, отладка,
 ---
 
 <div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Awoowe123&show_icons=true&theme=default&hide_border=true&bg_color=E4DDD3&title_color=1A1A18&icon_color=BA6D4B&text_color=1A1A18&ring_color=BA6D4B" height="165" alt="GitHub Stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Awoowe123&layout=compact&theme=default&hide_border=true&bg_color=E4DDD3&title_color=1A1A18&text_color=1A1A18" height="165" alt="Top Languages" />
-
----
 
 *build systems, not just code*
 
