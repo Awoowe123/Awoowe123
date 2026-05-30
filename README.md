@@ -21,8 +21,8 @@
 
 ### О себе
 
-Строю полноценные продукты с нуля — от идеи до деплоя.  
-Поднимаю инфраструктуру, проектирую архитектуру, пишу код.  
+Строю полноценные продукты с нуля — от идеи до деплоя.
+Поднимаю инфраструктуру, проектирую архитектуру, пишу код.
 AI усиливает каждый этап: генерация, отладка, автоматизация.
 
 Сейчас работаю с **Python**, присматриваюсь к **Go**, **Ruby** и **C++**.
@@ -42,11 +42,11 @@ AI усиливает каждый этап: генерация, отладка,
 
 ### Проекты
 
-| | Проект | Описание | Стек |
-|---|--------|---------|------|
-| 🏛 | **[SHKKRIT](https://github.com/Awoowe123/SHKKRIT)** | Платформа расписания для колледжа. 3D-карта кампуса, PWA, AI-ассистент | Next.js · Prisma · PostgreSQL · Three.js |
-| 🤖 | **[SkipOneAI](https://github.com/Awoowe123/SkipOneAI)** | Автономный AI-двойник для Telegram. 9 инструментов, клон стиля общения | Python · Telethon · RAG · Whisper |
-| 🎮 | **[EduPlay](https://github.com/Awoowe123/EduPlay)** | Платформа учебных игр в реальном времени. Live-сессии, AI-генерация | Next.js · NestJS · Socket.IO · Redis |
+| Проект | Описание | Стек |
+|--------|---------|------|
+| **[SHKKRIT](https://github.com/Awoowe123/SHKKRIT)** | Платформа расписания для колледжа. 3D-карта кампуса, PWA, AI-ассистент | Next.js · Prisma · PostgreSQL · Three.js |
+| **[SkipOneAI](https://github.com/Awoowe123/SkipOneAI)** | Автономный AI-двойник для Telegram. 9 инструментов, клон стиля общения | Python · Telethon · RAG · Whisper |
+| **[EduPlay](https://github.com/Awoowe123/EduPlay)** | Платформа учебных игр в реальном времени. Live-сессии, AI-генерация | Next.js · NestJS · Socket.IO · Redis |
 
 ---
 
