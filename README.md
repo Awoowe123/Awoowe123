@@ -45,8 +45,8 @@
 ### Statistics & Activity
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Awoowe123&show_icons=true&title_color=ff3333&icon_color=ff3333&text_color=ffffff&bg_color=0d1117&hide_border=true&count_private=true" alt="SkipOne's GitHub Stats" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Awoowe123&layout=compact&title_color=ff3333&icon_color=ff3333&text_color=ffffff&bg_color=0d1117&hide_border=true&count_private=true" alt="SkipOne's Top Languages" width="48%" />
+  <img src="https://github-stats-extended.vercel.app/api?username=Awoowe123&show_icons=true&title_color=ff3333&icon_color=ff3333&text_color=ffffff&bg_color=0d1117&hide_border=true&count_private=true" alt="SkipOne's GitHub Stats" width="48%" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs?username=Awoowe123&layout=compact&title_color=ff3333&icon_color=ff3333&text_color=ffffff&bg_color=0d1117&hide_border=true&count_private=true" alt="SkipOne's Top Languages" width="48%" />
 </div>
 
 <br />
