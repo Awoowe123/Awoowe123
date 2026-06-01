@@ -4,7 +4,7 @@
 
 <div align="center">
   <br />
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=3000&pause=1000&color=ff3333&center=true&vCenter=true&width=500&lines=AI-Augmented+Engineer;%D0%A1%D1%82%D1%80%D0%BE%D1%8E+%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%2C+%D0%B0+%D0%BD%D0%B5+%D0%BF%D0%B8%D1%88%D1%83+%D0%BA%D0%BE%D0%B4;Python+%C2%B7+TypeScript+%C2%B7+Go;Krasnoyarsk%2C+Russia" alt="Typing SVG" /></a>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=3000&pause=1000&color=ff3333;ffffff;ff3333;ffffff&center=true&vCenter=true&width=500&lines=AI-Augmented+Engineer;%D0%A1%D1%82%D1%80%D0%BE%D1%8E+%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%2C+%D0%B0+%D0%BD%D0%B5+%D0%BF%D0%B8%D1%88%D1%83+%D0%BA%D0%BE%D0%B4;Python+%C2%B7+TypeScript+%C2%B7+Go;Krasnoyarsk%2C+Russia" alt="Typing SVG" /></a>
   <br />
   <i>«Иногда история и тепло одного осколка огня бывает удивительнее и жарче, чем пламя целого кострища»</i>
   <br /><br />
@@ -81,7 +81,7 @@
   </a>
   &nbsp;&nbsp;
   <a href="mailto:contact@skipone.dev" target="_blank">
-    <img src="https://img.shields.io/badge/Email-%23ff3333?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-white?style=for-the-badge&logo=gmail&logoColor=ff3333" alt="Email" />
   </a>
   &nbsp;&nbsp;
   <a href="https://github.com/Awoowe123" target="_blank">
