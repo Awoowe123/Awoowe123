@@ -84,6 +84,14 @@ $ skipone --list-projects
 
   [03]  EduPlay      Real-Time Educational Games          Next.js · NestJS · Socket.IO · Redis
                      Multiplayer classroom games with instant state sync
+
+$ skipone --list-contributions
+
+  [M1]  ChronOS-Web  College Schedule Management System   Next.js · Prisma · PostgreSQL
+                     Took over maintainership, refactored core & deployed to production
+
+  [M2]  chronos-mobile  Mobile Client for ChronOS         React Native · TypeScript
+                        Inherited codebase, stabilized & shipped final release
 ```
 
 <div align="center">
@@ -97,6 +105,16 @@ $ skipone --list-projects
   &nbsp;
   <a href="https://github.com/Awoowe123/EduPlay">
     <img src="https://img.shields.io/badge/03_EduPlay-Educational_Games-ff3333?style=for-the-badge&labelColor=0d1117" alt="EduPlay" />
+  </a>
+</div>
+<div align="center">
+  <br />
+  <a href="https://github.com/Awoowe123/ChronOS-Web">
+    <img src="https://img.shields.io/badge/M1_ChronOS--Web-maintained-555555?style=flat-square&labelColor=0d1117" alt="ChronOS-Web" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Awoowe123/chronos-mobile">
+    <img src="https://img.shields.io/badge/M2_chronos--mobile-maintained-555555?style=flat-square&labelColor=0d1117" alt="chronos-mobile" />
   </a>
 </div>
 
