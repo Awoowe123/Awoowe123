@@ -27,12 +27,27 @@
 
 ### Tech Stack & Ecosystem
 
-| Layer | Tools & Technologies |
-| :--- | :--- |
-| **Languages** | `Python` · `TypeScript` · `Go` · `SQL` · `Bash` |
-| **Backend & DB** | `NestJS` · `Prisma` · `PostgreSQL` · `Redis` · `Socket.IO` · `Caddy` |
-| **Frontend** | `Next.js` · `React` · `TailwindCSS` · `Three.js` (3D layouts) |
-| **AI & Infra** | `Docker` · `Linux` · `LM Studio` · `Faster Whisper` · `RAG` · `Anthropic` |
+<div align="center">
+  <img src="https://img.shields.io/badge/SYS__STATUS-ACTIVE-ff3333?style=flat-square&logoWidth=0" alt="System Status" />
+  <img src="https://img.shields.io/badge/MEMORY-OPTIMIZED-ffffff?style=flat-square&logoWidth=0&labelColor=0d1117&color=ffffff" alt="Memory Status" />
+  <img src="https://img.shields.io/badge/REGION-RU--KJA-ff3333?style=flat-square&logoWidth=0" alt="Region Code" />
+  <img src="https://img.shields.io/badge/CORE-HYBRID-ffffff?style=flat-square&logoWidth=0&labelColor=0d1117&color=ffffff" alt="Core Hybrid" />
+</div>
+
+<br />
+
+```yaml
+# system_config.yaml
+skipone:
+  kernel: "SkipOne OS v2.6"
+  languages: [ "Python", "TypeScript", "Go", "SQL", "Bash" ]
+  backend:
+    frameworks: [ "NestJS", "FastAPI" ]
+    database:   [ "PostgreSQL", "Redis" ]
+    orm:        [ "Prisma" ]
+  frontend:     [ "Next.js", "React", "Three.js", "TailwindCSS" ]
+  infra_ai:     [ "Docker", "Linux", "RAG", "Faster Whisper", "LM Studio" ]
+```
 
 <br />
 
@@ -45,8 +60,7 @@
 ### Statistics & Activity
 
 <div align="center">
-  <img src="https://github-stats-extended.vercel.app/api?username=Awoowe123&show_icons=true&title_color=ff3333&icon_color=ff3333&text_color=ffffff&bg_color=0d1117&hide_border=true&count_private=true" alt="SkipOne's GitHub Stats" width="48%" />
-  <img src="https://github-stats-extended.vercel.app/api/top-langs?username=Awoowe123&layout=compact&title_color=ff3333&icon_color=ff3333&text_color=ffffff&bg_color=0d1117&hide_border=true&count_private=true" alt="SkipOne's Top Languages" width="48%" />
+  <img src="https://github-readme-stats-pi-weld.vercel.app/api/top-langs?username=Awoowe123&layout=compact&title_color=ff3333&icon_color=ff3333&text_color=ffffff&bg_color=0d1117&hide_border=true&count_private=true&cache_seconds=1800&include_all_commits=true" alt="SkipOne's Top Languages" width="60%" />
 </div>
 
 <br />
@@ -59,17 +73,32 @@
 
 ### Featured Projects
 
-#### [SHKKRIT](https://github.com/Awoowe123/SHKKRIT) — College Timetable Platform
-*A comprehensive student utility including 3D Interactive Campus Maps, full offline PWA capabilities, and responsive system engines.*
-* **Tech Stack**: `Next.js` · `Prisma` · `PostgreSQL` · `Three.js`
+```
+$ skipone --list-projects
 
-#### [SkipOneAI](https://github.com/Awoowe123/SkipOneAI) — Autonomous AI Telegram Twin
-*An active Telegram replica powered by Agentic LLMs with style cloning, local high-speed transcription (Whisper), and deep RAG knowledge.*
-* **Tech Stack**: `Python` · `Telethon` · `RAG` · `Whisper`
+  [01]  SHKKRIT      College Timetable Platform          Next.js · Prisma · PostgreSQL · Three.js
+                     3D campus maps, offline PWA, responsive schedule engines
 
-#### [EduPlay](https://github.com/Awoowe123/EduPlay) — Real-Time Educational Games
-*Multiplayer classroom games featuring instant state syncing, socket connections, and generative automated challenges.*
-* **Tech Stack**: `Next.js` · `NestJS` · `Socket.IO` · `Redis`
+  [02]  SkipOneAI    Autonomous AI Telegram Twin          Python · Telethon · RAG · Whisper
+                     Agentic LLM replica with style cloning & local transcription
+
+  [03]  EduPlay      Real-Time Educational Games          Next.js · NestJS · Socket.IO · Redis
+                     Multiplayer classroom games with instant state sync
+```
+
+<div align="center">
+  <a href="https://github.com/Awoowe123/SHKKRIT">
+    <img src="https://img.shields.io/badge/01_SHKKRIT-College_Timetable_Platform-ff3333?style=for-the-badge&labelColor=0d1117" alt="SHKKRIT" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Awoowe123/SkipOneAI">
+    <img src="https://img.shields.io/badge/02_SkipOneAI-AI_Telegram_Twin-ffffff?style=for-the-badge&labelColor=0d1117" alt="SkipOneAI" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Awoowe123/EduPlay">
+    <img src="https://img.shields.io/badge/03_EduPlay-Educational_Games-ff3333?style=for-the-badge&labelColor=0d1117" alt="EduPlay" />
+  </a>
+</div>
 
 ---
 
@@ -100,5 +129,5 @@
     <img alt="Snake animation" src="https://raw.githubusercontent.com/Awoowe123/Awoowe123/output/github-snake.svg" width="70%" />
   </picture>
   <br /><br />
-  <sub><i>• SkipOne 2026</i></sub>
+  <sub><i>• SkipOne 2026 •</i></sub>
 </div>
