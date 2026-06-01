@@ -4,7 +4,7 @@
 
 <div align="center">
   <br />
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=3000&pause=1000&color=ff3333;ffffff;ff3333;ffffff&center=true&vCenter=true&width=500&lines=AI-Augmented+Engineer;%D0%A1%D1%82%D1%80%D0%BE%D1%8E+%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%2C+%D0%B0+%D0%BD%D0%B5+%D0%BF%D0%B8%D1%88%D1%83+%D0%BA%D0%BE%D0%B4;Python+%C2%B7+TypeScript+%C2%B7+Go;Krasnoyarsk%2C+Russia" alt="Typing SVG" /></a>
+  <img src="assets/typing.svg" alt="SkipOne Typing Console" width="500" />
   <br />
   <i>«Иногда история и тепло одного осколка огня бывает удивительнее и жарче, чем пламя целого кострища»</i>
   <br /><br />
@@ -100,5 +100,5 @@
     <img alt="Snake animation" src="https://raw.githubusercontent.com/Awoowe123/Awoowe123/output/github-snake.svg" width="70%" />
   </picture>
   <br /><br />
-  <sub><i>build systems, not just code • SkipOne 2026</i></sub>
+  <sub><i>• SkipOne 2026</i></sub>
 </div>
