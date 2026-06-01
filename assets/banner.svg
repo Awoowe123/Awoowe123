@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220" width="100%" height="100%">
+  <defs>
+    <!-- Glowing filter for technical neon nodes -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Clean, subtle tech grid overlay -->
+  <g stroke="#ff3333" stroke-width="0.5" stroke-opacity="0.07">
+    <!-- Horizontal lines -->
+    <line x1="40" y1="50" x2="960" y2="50" />
+    <line x1="40" y1="110" x2="960" y2="110" />
+    <line x1="40" y1="170" x2="960" y2="170" />
+    <!-- Vertical lines -->
+    <line x1="150" y1="30" x2="150" y2="190" />
+    <line x1="300" y1="30" x2="300" y2="190" />
+    <line x1="750" y1="30" x2="750" y2="190" />
+  </g>
+
+  <!-- Cyberpunk L-shaped corner brackets -->
+  <path d="M 30,50 L 30,30 L 50,30" fill="none" stroke="#ff3333" stroke-width="2" />
+  <path d="M 970,50 L 970,30 L 950,30" fill="none" stroke="#ff3333" stroke-width="2" />
+  <path d="M 30,170 L 30,190 L 50,190" fill="none" stroke="#ff3333" stroke-width="2" />
+  <path d="M 970,170 L 970,190 L 950,190" fill="none" stroke="#ff3333" stroke-width="2" />
+
+  <!-- Left Side: Interactive Circuit & Data Flow -->
+  <g stroke="#ff3333" stroke-width="1.5" fill="none">
+    <!-- Main circuit tracks -->
+    <path d="M 60,110 L 110,110 L 140,70 L 200,70 L 230,110" stroke-opacity="0.4" />
+    <path d="M 110,110 L 140,150 L 200,150 L 230,110 L 270,110" stroke-opacity="0.4" />
+    
+    <!-- Static circuit junctions (nodes) -->
+    <circle cx="110" cy="110" r="4" fill="#ff3333" filter="url(#glow)" />
+    <circle cx="140" cy="70" r="4" fill="#000" stroke="#ff3333" stroke-width="1.5" />
+    <circle cx="140" cy="150" r="4" fill="#000" stroke="#ff3333" stroke-width="1.5" />
+    <circle cx="200" cy="70" r="4" fill="#000" stroke="#ff3333" stroke-width="1.5" />
+    <circle cx="200" cy="150" r="4" fill="#000" stroke="#ff3333" stroke-width="1.5" />
+    <circle cx="230" cy="110" r="4" fill="#ff3333" filter="url(#glow)" />
+
+    <!-- Animated Data Packets (Pulsing flow) -->
+    <circle r="3" fill="#ffffff" filter="url(#glow)">
+      <animateMotion path="M 60,110 L 110,110 L 140,70 L 200,70 L 230,110" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle r="3" fill="#ff3333" filter="url(#glow)">
+      <animateMotion path="M 110,110 L 140,150 L 200,150 L 230,110 L 270,110" dur="3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Left text details (terminal prompt style) -->
+  <text x="60" y="55" font-family="JetBrains Mono, Courier New, monospace" font-size="10" fill="#ff3333" font-weight="600" opacity="0.8">> SYSTEM_INIT...</text>
+  <text x="60" y="175" font-family="JetBrains Mono, Courier New, monospace" font-size="10" fill="#ffffff" font-weight="600" opacity="0.6">> RAG_ACTIVE</text>
+
+  <!-- Center-Right: Core Branding -->
+  <g transform="translate(320, 0)">
+    <!-- Main text logo with blinking caret -->
+    <text x="0" y="115" font-family="JetBrains Mono, Courier New, monospace" font-size="52" fill="#ffffff" font-weight="800" letter-spacing="2">SkipOne</text>
+    <!-- Blinking monospaced caret -->
+    <text x="225" y="115" font-family="JetBrains Mono, Courier New, monospace" font-size="52" fill="#ff3333" font-weight="800">_<animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite" /></text>
+    
+    <!-- Subtitle with wider spacing -->
+    <text x="5" y="150" font-family="JetBrains Mono, Courier New, monospace" font-size="14" fill="#ff3333" font-weight="600" letter-spacing="5">AI-AUGMENTED SYSTEMS ENGINEER</text>
+  </g>
+
+  <!-- Right Side: Cyber-brutalist System Metrics -->
+  <g transform="translate(770, 0)" font-family="JetBrains Mono, Courier New, monospace" font-size="11" font-weight="600">
+    <!-- Decorative brackets -->
+    <path d="M 0,55 L -10,55 L -10,155 L 0,155" fill="none" stroke="#ff3333" stroke-width="1.5" stroke-opacity="0.5" />
+    
+    <text x="10" y="70" fill="#ff3333">SYS_STATUS</text>
+    <text x="10" y="85" fill="#ffffff">ACTIVE // SECURE</text>
+
+    <text x="10" y="110" fill="#ff3333">LOC_COORD</text>
+    <text x="10" y="125" fill="#ffffff">56.0914 N 92.8932 E</text>
+
+    <text x="10" y="150" fill="#ff3333">MODULES</text>
+    <text x="10" y="165" fill="#ffffff">9_AGENT_FLOWS</text>
+  </g>
+</svg>
