@@ -4,15 +4,15 @@
 
 <div align="center">
   <br />
-  <img src="assets/typing.svg" alt="SkipOne Typing Console" width="500" />
-  <br />
+  <img src="assets/typing.svg" alt="SkipOne Boot Console" width="550" />
+  <br /><br />
   <i>«Иногда история и тепло одного осколка огня бывает удивительнее и жарче, чем пламя целого кострища»</i>
   <br /><br />
 </div>
 
 ---
 
-### System Status
+<h3>✦ System Status</h3>
 
 ```yml
 ● skipone.service - AI-Augmented Systems Engineer
@@ -25,13 +25,13 @@
 
 ---
 
-### Tech Stack & Ecosystem
+<h3>✦ Tech Stack & Ecosystem</h3>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/SYS__STATUS-ACTIVE-ff3333?style=flat-square&logoWidth=0" alt="System Status" />
-  <img src="https://img.shields.io/badge/MEMORY-OPTIMIZED-ffffff?style=flat-square&logoWidth=0&labelColor=0d1117&color=ffffff" alt="Memory Status" />
-  <img src="https://img.shields.io/badge/REGION-RU--KJA-ff3333?style=flat-square&logoWidth=0" alt="Region Code" />
-  <img src="https://img.shields.io/badge/CORE-HYBRID-ffffff?style=flat-square&logoWidth=0&labelColor=0d1117&color=ffffff" alt="Core Hybrid" />
+  <img src="https://img.shields.io/badge/SYS__STATUS-ACTIVE-c57e50?style=flat-square&logoWidth=0&labelColor=1e1e1e" alt="System Status" />
+  <img src="https://img.shields.io/badge/MEMORY-OPTIMIZED-dcd8d0?style=flat-square&logoWidth=0&labelColor=1e1e1e&color=dcd8d0" alt="Memory Status" />
+  <img src="https://img.shields.io/badge/REGION-RU--KJA-c57e50?style=flat-square&logoWidth=0&labelColor=1e1e1e" alt="Region Code" />
+  <img src="https://img.shields.io/badge/CORE-HYBRID-dcd8d0?style=flat-square&logoWidth=0&labelColor=1e1e1e&color=dcd8d0" alt="Core Hybrid" />
 </div>
 
 <br />
@@ -52,26 +52,26 @@ skipone:
 <br />
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=python,typescript,go,docker,linux,nextjs,react,postgres,redis,bash&theme=dark" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=python,typescript,go,docker,linux,nextjs,react,postgres,redis,bash&theme=light" alt="Tech Stack" />
 </div>
 
 ---
 
-### Statistics & Activity
+<h3>✦ Statistics & Activity</h3>
 
 <div align="center">
-  <img src="https://github-readme-stats-pi-weld.vercel.app/api/top-langs?username=Awoowe123&layout=compact&title_color=ff3333&icon_color=ff3333&text_color=ffffff&bg_color=0d1117&hide_border=true&count_private=true&cache_seconds=1800&include_all_commits=true" alt="SkipOne's Top Languages" width="60%" />
+  <img src="https://github-readme-stats-pi-weld.vercel.app/api/top-langs?username=Awoowe123&layout=compact&title_color=c57e50&icon_color=c57e50&text_color=4e4a42&bg_color=dcd8d0&hide_border=true&count_private=true&cache_seconds=1800&include_all_commits=true" alt="SkipOne's Top Languages" width="60%" />
 </div>
 
 <br />
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Awoowe123&theme=dark&background=0d1117&ring=ff3333&fire=ff3333&currStreakNum=ff3333&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" alt="SkipOne's Contribution Streak" width="97%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Awoowe123&theme=default&background=dcd8d0&ring=c57e50&fire=c57e50&currStreakNum=c57e50&sideNums=1e1e1e&sideLabels=7e7a72&dates=4e4a42&currStreakLabel=c57e50&hide_border=true" alt="SkipOne's Contribution Streak" width="97%" />
 </div>
 
 ---
 
-### Featured Projects
+<h3>✦ Featured Projects</h3>
 
 ```
 $ skipone --list-projects
@@ -96,43 +96,43 @@ $ skipone --list-contributions
 
 <div align="center">
   <a href="https://shkkrit.skipone.dev">
-    <img src="https://img.shields.io/badge/01_SHKKRIT-College_Timetable_Platform-ff3333?style=for-the-badge&labelColor=0d1117" alt="SHKKRIT" />
+    <img src="https://img.shields.io/badge/01_SHKKRIT-College_Timetable_Platform-c57e50?style=for-the-badge&labelColor=1e1e1e" alt="SHKKRIT" />
   </a>
   &nbsp;
   <a href="https://github.com/Awoowe123/SkipOneAI">
-    <img src="https://img.shields.io/badge/02_SkipOneAI-AI_Telegram_Twin-ffffff?style=for-the-badge&labelColor=0d1117" alt="SkipOneAI" />
+    <img src="https://img.shields.io/badge/02_SkipOneAI-AI_Telegram_Twin-dcd8d0?style=for-the-badge&labelColor=1e1e1e" alt="SkipOneAI" />
   </a>
   &nbsp;
   <a href="https://github.com/Awoowe123/EduPlay">
-    <img src="https://img.shields.io/badge/03_EduPlay-Educational_Games-ff3333?style=for-the-badge&labelColor=0d1117" alt="EduPlay" />
+    <img src="https://img.shields.io/badge/03_EduPlay-Educational_Games-c57e50?style=for-the-badge&labelColor=1e1e1e" alt="EduPlay" />
   </a>
 </div>
 <div align="center">
   <br />
   <a href="https://github.com/Awoowe123/ChronOS-Web">
-    <img src="https://img.shields.io/badge/M1_ChronOS--Web-maintained-555555?style=flat-square&labelColor=0d1117" alt="ChronOS-Web" />
+    <img src="https://img.shields.io/badge/M1_ChronOS--Web-maintained-7e7a72?style=flat-square&labelColor=1e1e1e" alt="ChronOS-Web" />
   </a>
   &nbsp;
   <a href="https://github.com/Awoowe123/chronos-mobile">
-    <img src="https://img.shields.io/badge/M2_chronos--mobile-maintained-555555?style=flat-square&labelColor=0d1117" alt="chronos-mobile" />
+    <img src="https://img.shields.io/badge/M2_chronos--mobile-maintained-7e7a72?style=flat-square&labelColor=1e1e1e" alt="chronos-mobile" />
   </a>
 </div>
 
 ---
 
-### System Access & Connections
+<h3>✦ System Access & Connections</h3>
 
 <div align="center">
   <a href="https://t.me/l_SkipOne_l" target="_blank">
-    <img src="https://img.shields.io/badge/Telegram-%23ff3333?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
+    <img src="https://img.shields.io/badge/Telegram-c57e50?style=for-the-badge&logo=telegram&logoColor=1e1e1e" alt="Telegram" />
   </a>
   &nbsp;&nbsp;
   <a href="mailto:contact@skipone.dev" target="_blank">
-    <img src="https://img.shields.io/badge/Email-white?style=for-the-badge&logo=gmail&logoColor=ff3333" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-dcd8d0?style=for-the-badge&logo=gmail&logoColor=c57e50" alt="Email" />
   </a>
   &nbsp;&nbsp;
   <a href="https://github.com/Awoowe123" target="_blank">
-    <img src="https://img.shields.io/badge/Developer_Profile-%23ff3333?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://img.shields.io/badge/Developer_Profile-c57e50?style=for-the-badge&logo=github&logoColor=1e1e1e" alt="GitHub" />
   </a>
 </div>
 
@@ -147,5 +147,5 @@ $ skipone --list-contributions
     <img alt="Snake animation" src="https://raw.githubusercontent.com/Awoowe123/Awoowe123/output/github-snake.svg" width="70%" />
   </picture>
   <br /><br />
-  <sub><i>• SkipOne 2026 •</i></sub>
+  <sub><i>✦ SkipOne 2026 ✦</i></sub>
 </div>

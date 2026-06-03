@@ -1,83 +1,402 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="100%" height="100%">
   <defs>
-    <!-- Glowing filter for technical neon nodes -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
+    <!-- Hand-drawn pencil wobble filter -->
+    <filter id="pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <!-- Softer wobble for text -->
+    <filter id="pencilSoft" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <!-- Warm glow for accents -->
+    <filter id="warmGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
 
-  <!-- Clean, subtle tech grid overlay -->
-  <g stroke="#ff3333" stroke-width="0.5" stroke-opacity="0.07">
-    <!-- Horizontal lines -->
-    <line x1="40" y1="50" x2="960" y2="50" />
-    <line x1="40" y1="110" x2="960" y2="110" />
-    <line x1="40" y1="170" x2="960" y2="170" />
-    <!-- Vertical lines -->
-    <line x1="150" y1="30" x2="150" y2="190" />
-    <line x1="300" y1="30" x2="300" y2="190" />
-    <line x1="750" y1="30" x2="750" y2="190" />
+  <style>
+    /* ═══════════════════════════════════════
+       STAMP ENTRANCE — logo press
+       ═══════════════════════════════════════ */
+    .stamp-in {
+      animation: stamp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes stamp {
+      0%   { opacity: 0; transform: scale(1.3); }
+      50%  { opacity: 1; transform: scale(0.97); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* ═══════════════════════════════════════
+       LINE DRAW — copper rule draws itself
+       ═══════════════════════════════════════ */
+    .draw-line {
+      stroke-dasharray: 900;
+      stroke-dashoffset: 900;
+      animation: drawIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+      animation-delay: 0.3s;
+    }
+    @keyframes drawIn {
+      to { stroke-dashoffset: 0; }
+    }
+
+    /* ═══════════════════════════════════════
+       CLIP REVEAL — text reveals from left
+       ═══════════════════════════════════════ */
+    .clip-reveal {
+      animation: clipReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: 0.5s;
+      clip-path: inset(0 100% 0 0);
+    }
+    @keyframes clipReveal {
+      to { clip-path: inset(0 0% 0 0); }
+    }
+
+    .clip-reveal-d2 {
+      animation: clipReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: 0.8s;
+      clip-path: inset(0 100% 0 0);
+    }
+
+    .clip-reveal-d3 {
+      animation: clipReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: 1.1s;
+      clip-path: inset(0 100% 0 0);
+    }
+
+    /* ═══════════════════════════════════════
+       FOG CLEAR — subtitle materializes
+       ═══════════════════════════════════════ */
+    .fog-in {
+      animation: fogClear 1s ease forwards;
+      animation-delay: 1.2s;
+      opacity: 0;
+    }
+    @keyframes fogClear {
+      0%   { opacity: 0; transform: translateY(5px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ═══════════════════════════════════════
+       HEARTBEAT — EKG waveform
+       ═══════════════════════════════════════ */
+    .heartbeat-line {
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: heartDraw 2.5s linear infinite;
+    }
+    @keyframes heartDraw {
+      0%   { stroke-dashoffset: 500; opacity: 0.8; }
+      75%  { stroke-dashoffset: 0; opacity: 0.8; }
+      90%  { stroke-dashoffset: 0; opacity: 0.2; }
+      100% { stroke-dashoffset: 500; opacity: 0; }
+    }
+
+    .heartbeat-trail {
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: heartDraw 2.5s linear infinite;
+      animation-delay: -0.2s;
+      opacity: 0.15;
+    }
+
+    .beat-dot {
+      animation: beatPulse 2.5s linear infinite;
+    }
+    @keyframes beatPulse {
+      0%   { r: 0; opacity: 0; }
+      8%   { r: 3; opacity: 1; }
+      70%  { r: 3; opacity: 0.8; }
+      80%  { r: 5; opacity: 0; }
+      100% { r: 0; opacity: 0; }
+    }
+
+    /* ═══════════════════════════════════════
+       STAT BOXES — rise in with stagger
+       ═══════════════════════════════════════ */
+    .stat-rise {
+      animation: riseIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+    }
+    .stat-d1 { animation-delay: 1.4s; }
+    .stat-d2 { animation-delay: 1.6s; }
+    .stat-d3 { animation-delay: 1.8s; }
+
+    @keyframes riseIn {
+      0%   { opacity: 0; transform: translateY(12px) scale(0.96); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* ═══════════════════════════════════════
+       CURSOR BREATHE
+       ═══════════════════════════════════════ */
+    .cursor-breathe {
+      animation: breathe 2.8s ease-in-out infinite;
+    }
+    @keyframes breathe {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.15; }
+    }
+
+    /* ═══════════════════════════════════════
+       CORNER DOODLES — fade in
+       ═══════════════════════════════════════ */
+    .corner-in {
+      animation: cornerFade 0.6s ease forwards;
+      opacity: 0;
+    }
+    .corner-d1 { animation-delay: 0.1s; }
+    .corner-d2 { animation-delay: 0.2s; }
+    .corner-d3 { animation-delay: 0.3s; }
+    .corner-d4 { animation-delay: 0.4s; }
+    @keyframes cornerFade {
+      to { opacity: 0.5; }
+    }
+
+    /* ═══════════════════════════════════════
+       SLEEPING CAT — tail wag
+       ═══════════════════════════════════════ */
+    .cat-tail {
+      transform-origin: 10px 28px;
+      animation: tailWag 4s ease-in-out infinite;
+    }
+    @keyframes tailWag {
+      0%   { transform: rotate(0deg); }
+      25%  { transform: rotate(-5deg); }
+      50%  { transform: rotate(4deg); }
+      75%  { transform: rotate(-3deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .cat-body {
+      animation: catBreathe 4s ease-in-out infinite;
+    }
+    @keyframes catBreathe {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-1px); }
+    }
+
+    .zzz {
+      animation: zzzFloat 3s ease-in-out infinite;
+    }
+    .zzz-d1 { animation-delay: 0s; }
+    .zzz-d2 { animation-delay: 1s; }
+    @keyframes zzzFloat {
+      0%   { opacity: 0; transform: translateY(0) translateX(0); }
+      20%  { opacity: 0.5; }
+      80%  { opacity: 0.3; }
+      100% { opacity: 0; transform: translateY(-12px) translateX(5px); }
+    }
+  </style>
+
+  <!-- ═══════════════════════════════════════════════════════
+       BACKGROUND — warm parchment
+       ═══════════════════════════════════════════════════════ -->
+  <rect width="1000" height="240" rx="4" fill="#dcd8d0"/>
+
+  <!-- Rough outer border (sketch style) -->
+  <rect x="4" y="4" width="992" height="232" rx="3" fill="none" stroke="#1e1e1e" stroke-width="2.5" filter="url(#pencil)"/>
+
+  <!-- Inner decorative dashed line -->
+  <rect x="12" y="12" width="976" height="216" rx="2" fill="none" stroke="#1e1e1e" stroke-width="0.7" stroke-dasharray="6 4" opacity="0.2"/>
+
+  <!-- Corner doodles (sketch feel) -->
+  <path d="M 14,14 Q 14,8 20,8" fill="none" stroke="#c57e50" stroke-width="1.5" class="corner-in corner-d1"/>
+  <path d="M 986,14 Q 986,8 980,8" fill="none" stroke="#c57e50" stroke-width="1.5" class="corner-in corner-d2"/>
+  <path d="M 14,226 Q 14,232 20,232" fill="none" stroke="#c57e50" stroke-width="1.5" class="corner-in corner-d3"/>
+  <path d="M 986,226 Q 986,232 980,232" fill="none" stroke="#c57e50" stroke-width="1.5" class="corner-in corner-d4"/>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LEFT — Oscilloscope / Heartbeat (hand-drawn feel)
+       ═══════════════════════════════════════════════════════ -->
+  <g transform="translate(30, 30)">
+    <!-- Scope frame (sketchy) -->
+    <rect x="0" y="0" width="260" height="180" rx="3" fill="#1e1e1e" fill-opacity="0.04" stroke="#1e1e1e" stroke-width="1.5" filter="url(#pencil)"/>
+
+    <!-- Inner grid (faint) -->
+    <g stroke="#1e1e1e" stroke-width="0.3" opacity="0.08" stroke-dasharray="3,5">
+      <line x1="0" y1="45" x2="260" y2="45"/>
+      <line x1="0" y1="90" x2="260" y2="90"/>
+      <line x1="0" y1="135" x2="260" y2="135"/>
+      <line x1="65" y1="0" x2="65" y2="180"/>
+      <line x1="130" y1="0" x2="130" y2="180"/>
+      <line x1="195" y1="0" x2="195" y2="180"/>
+    </g>
+
+    <!-- Center reference line -->
+    <line x1="5" y1="90" x2="255" y2="90" stroke="#c57e50" stroke-width="0.5" opacity="0.25"/>
+
+    <!-- EKG waveform — hand-drawn feel via pencilSoft filter -->
+    <!-- Trail -->
+    <path d="M 5,90 L 30,90 L 40,90
+             Q 50,90 55,82 Q 60,74 65,90
+             L 75,90 L 80,90
+             L 85,92 L 90,100 L 98,48 L 106,130 L 112,70 L 118,90
+             L 128,90
+             Q 140,90 148,78 Q 156,66 164,90
+             L 185,90 L 255,90"
+          fill="none" stroke="#c57e50" stroke-width="1.5" stroke-linecap="round"
+          class="heartbeat-trail" filter="url(#pencilSoft)"/>
+
+    <!-- Main waveform -->
+    <path d="M 5,90 L 30,90 L 40,90
+             Q 50,90 55,82 Q 60,74 65,90
+             L 75,90 L 80,90
+             L 85,92 L 90,100 L 98,48 L 106,130 L 112,70 L 118,90
+             L 128,90
+             Q 140,90 148,78 Q 156,66 164,90
+             L 185,90 L 255,90"
+          fill="none" stroke="#c57e50" stroke-width="2.5" stroke-linecap="round"
+          class="heartbeat-line" filter="url(#pencilSoft)"/>
+
+    <!-- Pulse dot at peak -->
+    <circle cx="98" cy="48" fill="#c57e50" filter="url(#warmGlow)" class="beat-dot"/>
+
+    <!-- Scope label -->
+    <text x="8" y="18" font-family="'Comic Sans MS', 'Comic Neue', cursive" font-size="11" fill="#1e1e1e" font-weight="bold" opacity="0.6">sys.heartbeat</text>
+    <text x="180" y="18" font-family="'Inter', system-ui, sans-serif" font-size="9" fill="#c57e50" font-weight="600" opacity="0.7">NOMINAL</text>
+
+    <!-- Bottom scope caption -->
+    <text x="8" y="172" font-family="'Inter', system-ui, sans-serif" font-size="8" fill="#7e7a72" font-weight="600" letter-spacing="1">ACTIVE SINCE 2024</text>
   </g>
 
-  <!-- Cyberpunk L-shaped corner brackets -->
-  <path d="M 30,50 L 30,30 L 50,30" fill="none" stroke="#ff3333" stroke-width="2" />
-  <path d="M 970,50 L 970,30 L 950,30" fill="none" stroke="#ff3333" stroke-width="2" />
-  <path d="M 30,170 L 30,190 L 50,190" fill="none" stroke="#ff3333" stroke-width="2" />
-  <path d="M 970,170 L 970,190 L 950,190" fill="none" stroke="#ff3333" stroke-width="2" />
+  <!-- ═══════════════════════════════════════════════════════
+       CENTER — Core Branding
+       ═══════════════════════════════════════════════════════ -->
 
-  <!-- Left Side: Interactive Circuit & Data Flow -->
-  <g stroke="#ff3333" stroke-width="1.5" fill="none">
-    <!-- Main circuit tracks -->
-    <path d="M 60,110 L 110,110 L 140,70 L 200,70 L 230,110" stroke-opacity="0.4" />
-    <path d="M 110,110 L 140,150 L 200,150 L 230,110 L 270,110" stroke-opacity="0.4" />
-    
-    <!-- Static circuit junctions (nodes) -->
-    <circle cx="110" cy="110" r="4" fill="#ff3333" filter="url(#glow)" />
-    <circle cx="140" cy="70" r="4" fill="#000" stroke="#ff3333" stroke-width="1.5" />
-    <circle cx="140" cy="150" r="4" fill="#000" stroke="#ff3333" stroke-width="1.5" />
-    <circle cx="200" cy="70" r="4" fill="#000" stroke="#ff3333" stroke-width="1.5" />
-    <circle cx="200" cy="150" r="4" fill="#000" stroke="#ff3333" stroke-width="1.5" />
-    <circle cx="230" cy="110" r="4" fill="#ff3333" filter="url(#glow)" />
+  <!-- Copper line draws itself -->
+  <path d="M 320,65 Q 500,63 690,65" fill="none" stroke="#c57e50" stroke-width="2" class="draw-line" filter="url(#pencil)"/>
 
-    <!-- Animated Data Packets (Pulsing flow) -->
-    <circle r="3" fill="#ffffff" filter="url(#glow)">
-      <animateMotion path="M 60,110 L 110,110 L 140,70 L 200,70 L 230,110" dur="4s" repeatCount="indefinite" />
-    </circle>
-    <circle r="3" fill="#ff3333" filter="url(#glow)">
-      <animateMotion path="M 110,110 L 140,150 L 200,150 L 230,110 L 270,110" dur="3s" repeatCount="indefinite" />
-    </circle>
+  <!-- Main name — stamp entrance -->
+  <g class="stamp-in" filter="url(#pencilSoft)">
+    <text x="505" y="120" text-anchor="middle" font-family="'Comic Sans MS', 'Comic Neue', cursive" font-size="58" fill="#1e1e1e" font-weight="bold">SkipOne</text>
   </g>
 
-  <!-- Left text details (terminal prompt style) -->
-  <text x="60" y="55" font-family="JetBrains Mono, Courier New, monospace" font-size="10" fill="#ff3333" font-weight="600" opacity="0.8">> SYSTEM_INIT...</text>
-  <text x="60" y="175" font-family="JetBrains Mono, Courier New, monospace" font-size="10" fill="#ffffff" font-weight="600" opacity="0.6">> RAG_ACTIVE</text>
+  <!-- Cursor bar under "One" — static, copper -->
+  <rect x="514" y="123" width="104" height="3.5" rx="1" fill="#c57e50" opacity="0.5"/>
 
-  <!-- Center-Right: Core Branding -->
-  <g transform="translate(320, 0)">
-    <!-- Main text logo with blinking caret -->
-    <text x="0" y="115" font-family="JetBrains Mono, Courier New, monospace" font-size="52" fill="#ffffff" font-weight="800" letter-spacing="2">SkipOne</text>
-    <!-- Blinking monospaced caret -->
-    <text x="225" y="115" font-family="JetBrains Mono, Courier New, monospace" font-size="52" fill="#ff3333" font-weight="800">_<animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite" /></text>
-    
-    <!-- Subtitle with wider spacing -->
-    <text x="5" y="150" font-family="JetBrains Mono, Courier New, monospace" font-size="14" fill="#ff3333" font-weight="600" letter-spacing="5">AI-AUGMENTED SYSTEMS ENGINEER</text>
+  <!-- Subtitle — clip reveal -->
+  <g class="clip-reveal-d2">
+    <text x="505" y="150" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="13" fill="#c57e50" font-weight="600" letter-spacing="4">AI-AUGMENTED ENGINEER</text>
   </g>
 
-  <!-- Right Side: Cyber-brutalist System Metrics -->
-  <g transform="translate(770, 0)" font-family="JetBrains Mono, Courier New, monospace" font-size="11" font-weight="600">
-    <!-- Decorative brackets -->
-    <path d="M 0,55 L -10,55 L -10,155 L 0,155" fill="none" stroke="#ff3333" stroke-width="1.5" stroke-opacity="0.5" />
-    
-    <text x="10" y="70" fill="#ff3333">SYS_STATUS</text>
-    <text x="10" y="85" fill="#ffffff">ACTIVE // SECURE</text>
+  <!-- Copper underline directly under "SkipOne" — covers "One" fully -->
+  <path d="M 410,128 Q 530,126 650,128" fill="none" stroke="#c57e50" stroke-width="2" opacity="0.4" filter="url(#pencil)"/>
 
-    <text x="10" y="110" fill="#ff3333">LOC_COORD</text>
-    <text x="10" y="125" fill="#ffffff">56.0914 N 92.8932 E</text>
-
-    <text x="10" y="150" fill="#ff3333">MODULES</text>
-    <text x="10" y="165" fill="#ffffff">9_AGENT_FLOWS</text>
+  <!-- Philosophy quote — fog in -->
+  <g class="fog-in">
+    <text x="505" y="185" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#7e7a72" font-style="italic">"Build systems, not just code."</text>
   </g>
+
+  <!-- ═══════════════════════════════════════════════════════
+       RIGHT — Stat boxes (brutalist cards)
+       ═══════════════════════════════════════════════════════ -->
+  <g transform="translate(720, 30)">
+    <!-- Box 1: Location -->
+    <g class="stat-rise stat-d1">
+      <rect x="0" y="0" width="130" height="52" rx="2" fill="#1e1e1e" fill-opacity="0.04" stroke="#1e1e1e" stroke-width="1.5" filter="url(#pencil)"/>
+      <text x="65" y="18" text-anchor="middle" fill="#7e7a72" font-family="'Inter', system-ui, sans-serif" font-size="8" letter-spacing="1.5" font-weight="600">LOCATION</text>
+      <text x="65" y="40" text-anchor="middle" fill="#1e1e1e" font-family="'Comic Sans MS', cursive" font-size="16" font-weight="bold">KJA · RU</text>
+    </g>
+
+    <!-- Box 2: Stack -->
+    <g class="stat-rise stat-d2">
+      <rect x="140" y="0" width="130" height="52" rx="2" fill="#c57e50" fill-opacity="0.08" stroke="#c57e50" stroke-width="1.5" filter="url(#pencil)"/>
+      <text x="205" y="18" text-anchor="middle" fill="#a86134" font-family="'Inter', system-ui, sans-serif" font-size="8" letter-spacing="1.5" font-weight="600">CORE STACK</text>
+      <text x="205" y="40" text-anchor="middle" fill="#c57e50" font-family="'Comic Sans MS', cursive" font-size="14" font-weight="bold">Py · TS · Go</text>
+    </g>
+
+    <!-- Box 3: Focus -->
+    <g class="stat-rise stat-d2">
+      <rect x="0" y="62" width="130" height="52" rx="2" fill="#1e1e1e" fill-opacity="0.04" stroke="#1e1e1e" stroke-width="1.5" filter="url(#pencil)"/>
+      <text x="65" y="80" text-anchor="middle" fill="#7e7a72" font-family="'Inter', system-ui, sans-serif" font-size="8" letter-spacing="1.5" font-weight="600">FOCUS</text>
+      <text x="65" y="102" text-anchor="middle" fill="#1e1e1e" font-family="'Comic Sans MS', cursive" font-size="14" font-weight="bold">Full-Stack</text>
+    </g>
+
+    <!-- Box 4: Status -->
+    <g class="stat-rise stat-d3">
+      <rect x="140" y="62" width="130" height="52" rx="2" fill="#1e1e1e" fill-opacity="0.04" stroke="#1e1e1e" stroke-width="1.5" filter="url(#pencil)"/>
+      <text x="205" y="80" text-anchor="middle" fill="#7e7a72" font-family="'Inter', system-ui, sans-serif" font-size="8" letter-spacing="1.5" font-weight="600">STATUS</text>
+
+      <!-- Checkmark + label centered -->
+      <text x="200" y="100" text-anchor="middle" fill="#1e1e1e" font-family="'Comic Sans MS', cursive" font-size="14" font-weight="bold"><tspan fill="#c57e50">✓ </tspan>Active</text>
+    </g>
+
+    <!-- Bottom decorative line -->
+    <path d="M 0,128 Q 135,126 270,128" fill="none" stroke="#1e1e1e" stroke-width="0.8" opacity="0.2" filter="url(#pencil)"/>
+
+    <!-- Modules list -->
+    <g class="clip-reveal-d3">
+      <text x="0" y="148" fill="#7e7a72" font-family="'Inter', system-ui, sans-serif" font-size="8" letter-spacing="1" font-weight="600">MODULES:</text>
+      <text x="65" y="148" fill="#4e4a42" font-family="'Inter', system-ui, sans-serif" font-size="8">RAG · Whisper · Docker · NestJS</text>
+    </g>
+
+    <g class="fog-in">
+      <text x="0" y="168" fill="#7e7a72" font-family="'Inter', system-ui, sans-serif" font-size="8" letter-spacing="1" font-weight="600">INFRA:</text>
+      <text x="43" y="168" fill="#4e4a42" font-family="'Inter', system-ui, sans-serif" font-size="8">Caddy · LLM · Linux</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════
+       BOTTOM RIGHT — Sleeping cat doodle
+       ═══════════════════════════════════════════════════════ -->
+  <g transform="translate(930, 195)" filter="url(#pencilSoft)" opacity="0.6">
+    <!-- Tail (hangs down, gentle sway) -->
+    <g class="cat-tail">
+      <path d="M 10,10 C 18,16 22,28 14,32 C 6,36 -2,33 -4,29"
+            fill="none" stroke="#2a2520" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- Cat body (curled up, filled) -->
+    <g class="cat-body">
+      <!-- Main body — rounded loaf shape -->
+      <path d="M -10,28 C -18,28 -25,22 -25,15 C -25,8 -18,2 -8,2 C 2,2 12,6 15,12 C 18,18 15,28 5,30 C 0,31 -5,29 -10,28 Z"
+            fill="#2a2520"/>
+
+      <!-- Head — round, overlapping body -->
+      <circle cx="-20" cy="14" r="10" fill="#2a2520"/>
+
+      <!-- Left ear -->
+      <path d="M -28,8 L -30,0 L -24,5" fill="#2a2520" stroke="#2a2520" stroke-width="0.5" stroke-linejoin="round"/>
+      <!-- Inner ear -->
+      <path d="M -27,7 L -28.5,2 L -25,5.5" fill="#c57e50" opacity="0.4"/>
+
+      <!-- Right ear -->
+      <path d="M -14,5 L -12,-2 L -10,5" fill="#2a2520" stroke="#2a2520" stroke-width="0.5" stroke-linejoin="round"/>
+      <!-- Inner ear -->
+      <path d="M -13.5,5 L -12,0 L -10.8,5" fill="#c57e50" opacity="0.4"/>
+
+      <!-- Closed eyes — cute curved lines -->
+      <path d="M -25,14 C -24,16 -22,16 -21,14" fill="none" stroke="#dcd8d0" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M -18,13 C -17,15 -15,15 -14,13" fill="none" stroke="#dcd8d0" stroke-width="1.3" stroke-linecap="round"/>
+
+      <!-- Nose -->
+      <ellipse cx="-19" cy="17" rx="1.2" ry="0.8" fill="#c57e50"/>
+
+      <!-- Tiny mouth lines -->
+      <path d="M -19,17.8 L -20,19" fill="none" stroke="#dcd8d0" stroke-width="0.6" stroke-linecap="round" opacity="0.5"/>
+      <path d="M -19,17.8 L -18,19" fill="none" stroke="#dcd8d0" stroke-width="0.6" stroke-linecap="round" opacity="0.5"/>
+
+      <!-- Whiskers -->
+      <line x1="-27" y1="16" x2="-35" y2="14" stroke="#dcd8d0" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-27" y1="17" x2="-35" y2="18" stroke="#dcd8d0" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-13" y1="16" x2="-6" y2="14" stroke="#dcd8d0" stroke-width="0.5" opacity="0.4"/>
+      <line x1="-13" y1="17" x2="-6" y2="18" stroke="#dcd8d0" stroke-width="0.5" opacity="0.4"/>
+
+
+    </g>
+
+    <!-- Zzz bubbles floating up -->
+    <text x="-8" y="2" font-family="'Comic Sans MS', cursive" font-size="7" fill="#c57e50" font-weight="bold" class="zzz zzz-d1">z</text>
+    <text x="-4" y="-4" font-family="'Comic Sans MS', cursive" font-size="9" fill="#c57e50" font-weight="bold" class="zzz zzz-d2">z</text>
+  </g>
+
 </svg>

@@ -1,62 +1,322 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 40" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 185" width="100%" height="100%">
   <defs>
-    <!-- Symmetrical typewriter clipping masks that expand from left to right (X=0) to full width (500) -->
-    <clipPath id="clip1">
-      <rect x="0" y="0" width="0" height="40">
-        <animate attributeName="width" values="0;500;500;0;0" keyTimes="0;0.09375;0.2125;0.2375;1" dur="16s" repeatCount="indefinite" />
-      </rect>
-    </clipPath>
-
-    <clipPath id="clip2">
-      <rect x="0" y="0" width="0" height="40">
-        <animate attributeName="width" values="0;0;500;500;0;0" keyTimes="0;0.25;0.34375;0.4625;0.4875;1" dur="16s" repeatCount="indefinite" />
-      </rect>
-    </clipPath>
-
-    <clipPath id="clip3">
-      <rect x="0" y="0" width="0" height="40">
-        <animate attributeName="width" values="0;0;500;500;0;0" keyTimes="0;0.50;0.59375;0.7125;0.7375;1" dur="16s" repeatCount="indefinite" />
-      </rect>
-    </clipPath>
-
-    <clipPath id="clip4">
-      <rect x="0" y="0" width="0" height="40">
-        <animate attributeName="width" values="0;0;500;500;0;0" keyTimes="0;0.75;0.84375;0.9625;0.9875;1" dur="16s" repeatCount="indefinite" />
-      </rect>
-    </clipPath>
+    <!-- Hand-drawn pencil wobble -->
+    <filter id="pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
   </defs>
 
   <style>
-    .tech-text {
-      font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 19px;
-      font-weight: 600;
-      text-anchor: middle;
-      dominant-baseline: middle;
+    /* ═══════════════════════════════════════
+       LINE-BY-LINE CLIP REVEAL
+       Each line types out sequentially, stays visible, then all erase.
+       Total cycle: 20s
+       ═══════════════════════════════════════ */
+
+    /* Line 1: 0.3s → 1.5s type */
+    .line1-clip rect {
+      animation: r1 20s cubic-bezier(0.33, 1, 0.68, 1) infinite;
     }
+    @keyframes r1 {
+      0%    { width: 0; }
+      1.5%  { width: 0; }
+      7.5%  { width: 600px; }
+      87%   { width: 600px; }
+      92%   { width: 0; }
+      100%  { width: 0; }
+    }
+
+    /* Line 2: 2s → 3.5s type */
+    .line2-clip rect {
+      animation: r2 20s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+    }
+    @keyframes r2 {
+      0%    { width: 0; }
+      10%   { width: 0; }
+      17.5% { width: 600px; }
+      87%   { width: 600px; }
+      92%   { width: 0; }
+      100%  { width: 0; }
+    }
+
+    /* Line 3: 4s → 5.5s type */
+    .line3-clip rect {
+      animation: r3 20s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+    }
+    @keyframes r3 {
+      0%    { width: 0; }
+      20%   { width: 0; }
+      27.5% { width: 600px; }
+      87%   { width: 600px; }
+      92%   { width: 0; }
+      100%  { width: 0; }
+    }
+
+    /* Line 4: 6s → 7.5s type */
+    .line4-clip rect {
+      animation: r4 20s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+    }
+    @keyframes r4 {
+      0%    { width: 0; }
+      30%   { width: 0; }
+      37.5% { width: 600px; }
+      87%   { width: 600px; }
+      92%   { width: 0; }
+      100%  { width: 0; }
+    }
+
+    /* Line 5: 8s → 9.5s type */
+    .line5-clip rect {
+      animation: r5 20s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+    }
+    @keyframes r5 {
+      0%    { width: 0; }
+      40%   { width: 0; }
+      47.5% { width: 600px; }
+      87%   { width: 600px; }
+      92%   { width: 0; }
+      100%  { width: 0; }
+    }
+
+    /* Line 6: 10s → 11.5s type */
+    .line6-clip rect {
+      animation: r6 20s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+    }
+    @keyframes r6 {
+      0%    { width: 0; }
+      50%   { width: 0; }
+      57.5% { width: 600px; }
+      87%   { width: 600px; }
+      92%   { width: 0; }
+      100%  { width: 0; }
+    }
+
+    /* Line 7: 12s → 13.5s type */
+    .line7-clip rect {
+      animation: r7 20s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+    }
+    @keyframes r7 {
+      0%    { width: 0; }
+      60%   { width: 0; }
+      67.5% { width: 600px; }
+      87%   { width: 600px; }
+      92%   { width: 0; }
+      100%  { width: 0; }
+    }
+
+    /* ═══════════════════════════════════════
+       PROMPT — fades in before each line
+       ═══════════════════════════════════════ */
+    .p1 { animation: pb1 20s step-end infinite; }
+    @keyframes pb1 {
+      0% { opacity: 0; } 1% { opacity: 1; } 92% { opacity: 0; }
+    }
+    .p2 { animation: pb2 20s step-end infinite; }
+    @keyframes pb2 {
+      0% { opacity: 0; } 9% { opacity: 1; } 92% { opacity: 0; }
+    }
+    .p3 { animation: pb3 20s step-end infinite; }
+    @keyframes pb3 {
+      0% { opacity: 0; } 19% { opacity: 1; } 92% { opacity: 0; }
+    }
+    .p4 { animation: pb4 20s step-end infinite; }
+    @keyframes pb4 {
+      0% { opacity: 0; } 29% { opacity: 1; } 92% { opacity: 0; }
+    }
+    .p5 { animation: pb5 20s step-end infinite; }
+    @keyframes pb5 {
+      0% { opacity: 0; } 39% { opacity: 1; } 92% { opacity: 0; }
+    }
+    .p6 { animation: pb6 20s step-end infinite; }
+    @keyframes pb6 {
+      0% { opacity: 0; } 49% { opacity: 1; } 92% { opacity: 0; }
+    }
+    .p7 { animation: pb7 20s step-end infinite; }
+    @keyframes pb7 {
+      0% { opacity: 0; } 59% { opacity: 1; } 92% { opacity: 0; }
+    }
+
+    /* ═══════════════════════════════════════
+       CHECKMARK — copper flash then settle
+       ═══════════════════════════════════════ */
+    .ok1 { animation: ok1a 20s step-end infinite; }
+    @keyframes ok1a {
+      0% { fill: #c57e50; opacity: 0; }
+      7% { fill: #7ab87a; opacity: 1; }
+      9% { fill: #c57e50; opacity: 1; }
+      92% { opacity: 0; }
+    }
+    .ok2 { animation: ok2a 20s step-end infinite; }
+    @keyframes ok2a {
+      0% { fill: #c57e50; opacity: 0; }
+      17% { fill: #7ab87a; opacity: 1; }
+      19% { fill: #c57e50; opacity: 1; }
+      92% { opacity: 0; }
+    }
+    .ok3 { animation: ok3a 20s step-end infinite; }
+    @keyframes ok3a {
+      0% { fill: #c57e50; opacity: 0; }
+      27% { fill: #7ab87a; opacity: 1; }
+      29% { fill: #c57e50; opacity: 1; }
+      92% { opacity: 0; }
+    }
+
+    /* ═══════════════════════════════════════
+       FINAL CURSOR BREATHE
+       ═══════════════════════════════════════ */
+    .final-cursor {
+      animation: cursorBlink 20s step-end infinite;
+    }
+    @keyframes cursorBlink {
+      0%    { opacity: 0; }
+      67.5% { opacity: 0; }
+      68%   { opacity: 1; }
+      70%   { opacity: 0; }
+      70.5% { opacity: 1; }
+      73%   { opacity: 0; }
+      73.5% { opacity: 1; }
+      76%   { opacity: 0; }
+      76.5% { opacity: 1; }
+      79%   { opacity: 0; }
+      79.5% { opacity: 1; }
+      82%   { opacity: 0; }
+      82.5% { opacity: 1; }
+      85%   { opacity: 0; }
+      85.5% { opacity: 1; }
+      87%   { opacity: 0; }
+      92%   { opacity: 0; }
+    }
+
+    /* ═══════════════════════════════════════
+       DECORATIVE FRAME PULSE
+       ═══════════════════════════════════════ */
+    .frame-corner {
+      animation: cornerPulse 4s ease-in-out infinite;
+    }
+    @keyframes cornerPulse {
+      0%   { opacity: 0.3; }
+      50%  { opacity: 0.7; }
+      100% { opacity: 0.3; }
+    }
+
+    /* Base text */
+    .t {
+      font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .prompt { fill: #c57e50; }
+    .label  { fill: #7e7a72; }
+    .value  { fill: #1e1e1e; }
+    .dots   { fill: #b8b4ab; }
   </style>
 
-  <!-- Line 1: AI-Augmented Engineer (Red) -->
-  <text x="250" y="20" class="tech-text" fill="#ff3333" clip-path="url(#clip1)">
-    AI-Augmented Engineer
-    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.2125;0.2375;1" dur="16s" repeatCount="indefinite" />
-  </text>
+  <!-- ═══════════════════════════════════════════════════════
+       BACKGROUND — warm parchment (matches banner)
+       ═══════════════════════════════════════════════════════ -->
+  <rect width="620" height="185" rx="4" fill="#dcd8d0"/>
 
-  <!-- Line 2: Проектирую распределенные системы (White) -->
-  <text x="250" y="20" class="tech-text" fill="#ffffff" clip-path="url(#clip2)">
-    Проектирую распределенные системы
-    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.249;0.25;0.4625;0.4875;1" dur="16s" repeatCount="indefinite" />
-  </text>
+  <!-- Rough border -->
+  <rect x="3" y="3" width="614" height="179" rx="3" fill="none" stroke="#1e1e1e" stroke-width="1.5" filter="url(#pencil)"/>
 
-  <!-- Line 3: Python · TypeScript · Go (Red) -->
-  <text x="250" y="20" class="tech-text" fill="#ff3333" clip-path="url(#clip3)">
-    Python · TypeScript · Go
-    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.499;0.50;0.7125;0.7375;1" dur="16s" repeatCount="indefinite" />
-  </text>
+  <!-- Inner dashed border -->
+  <rect x="8" y="8" width="604" height="169" rx="2" fill="none" stroke="#1e1e1e" stroke-width="0.5" stroke-dasharray="5 4" opacity="0.15"/>
 
-  <!-- Line 4: Krasnoyarsk, Russia (White) -->
-  <text x="250" y="20" class="tech-text" fill="#ffffff" clip-path="url(#clip4)">
-    Krasnoyarsk, Russia
-    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.749;0.75;0.9625;0.9875;1" dur="16s" repeatCount="indefinite" />
-  </text>
+  <!-- Corner doodles -->
+  <path d="M 10,10 Q 10,5 16,5" fill="none" stroke="#c57e50" stroke-width="1.2" class="frame-corner"/>
+  <path d="M 610,10 Q 610,5 604,5" fill="none" stroke="#c57e50" stroke-width="1.2" class="frame-corner"/>
+  <path d="M 10,175 Q 10,180 16,180" fill="none" stroke="#c57e50" stroke-width="1.2" class="frame-corner"/>
+  <path d="M 610,175 Q 610,180 604,180" fill="none" stroke="#c57e50" stroke-width="1.2" class="frame-corner"/>
+
+  <!-- Left decorative bar -->
+  <rect x="16" y="18" width="2" height="150" fill="#c57e50" opacity="0.12" rx="1"/>
+
+  <!-- Clip path definitions -->
+  <defs>
+    <clipPath id="c1" class="line1-clip"><rect x="0" y="0" width="0" height="185"/></clipPath>
+    <clipPath id="c2" class="line2-clip"><rect x="0" y="0" width="0" height="185"/></clipPath>
+    <clipPath id="c3" class="line3-clip"><rect x="0" y="0" width="0" height="185"/></clipPath>
+    <clipPath id="c4" class="line4-clip"><rect x="0" y="0" width="0" height="185"/></clipPath>
+    <clipPath id="c5" class="line5-clip"><rect x="0" y="0" width="0" height="185"/></clipPath>
+    <clipPath id="c6" class="line6-clip"><rect x="0" y="0" width="0" height="185"/></clipPath>
+    <clipPath id="c7" class="line7-clip"><rect x="0" y="0" width="0" height="185"/></clipPath>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LINE 1: INIT kernel
+       ═══════════════════════════════════════════════════════ -->
+  <text x="28" y="36" class="t prompt p1">></text>
+  <g clip-path="url(#c1)">
+    <text x="42" y="36" class="t label">INIT</text>
+    <text x="78" y="36" class="t value">skipone.kernel v2.6</text>
+    <text x="280" y="36" class="t dots">··················</text>
+  </g>
+  <text x="440" y="36" class="t ok1" font-family="'Comic Sans MS', cursive" font-weight="bold">✓ ok</text>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LINE 2: LOADING ai_modules
+       ═══════════════════════════════════════════════════════ -->
+  <text x="28" y="59" class="t prompt p2">></text>
+  <g clip-path="url(#c2)">
+    <text x="42" y="59" class="t label">LOADING</text>
+    <text x="110" y="59" class="t value">ai_modules (RAG, Whisper)</text>
+    <text x="370" y="59" class="t dots">·········</text>
+  </g>
+  <text x="440" y="59" class="t ok2" font-family="'Comic Sans MS', cursive" font-weight="bold">✓ ok</text>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LINE 3: SYNC distributed_systems
+       ═══════════════════════════════════════════════════════ -->
+  <text x="28" y="82" class="t prompt p3">></text>
+  <g clip-path="url(#c3)">
+    <text x="42" y="82" class="t label">SYNC</text>
+    <text x="78" y="82" class="t value">distributed_systems</text>
+    <text x="280" y="82" class="t dots">··················</text>
+  </g>
+  <text x="440" y="82" class="t ok3" font-family="'Comic Sans MS', cursive" font-weight="bold">✓ ok</text>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LINE 4: ACTIVE stack
+       ═══════════════════════════════════════════════════════ -->
+  <text x="28" y="105" class="t prompt p4">></text>
+  <g clip-path="url(#c4)">
+    <text x="42" y="105" class="t label">ACTIVE:</text>
+    <text x="110" y="105" class="t" fill="#c57e50" font-family="'Comic Sans MS', cursive" font-weight="bold">Python</text>
+    <text x="170" y="105" class="t value">·</text>
+    <text x="183" y="105" class="t" fill="#c57e50" font-family="'Comic Sans MS', cursive" font-weight="bold">TypeScript</text>
+    <text x="283" y="105" class="t value">·</text>
+    <text x="296" y="105" class="t" fill="#c57e50" font-family="'Comic Sans MS', cursive" font-weight="bold">Go</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LINE 5: LOCATION
+       ═══════════════════════════════════════════════════════ -->
+  <text x="28" y="128" class="t prompt p5">></text>
+  <g clip-path="url(#c5)">
+    <text x="42" y="128" class="t label">LOCATION:</text>
+    <text x="134" y="128" class="t value">56.0914°N  92.8932°E</text>
+    <text x="350" y="128" class="t" fill="#c57e50" opacity="0.6" font-family="'Comic Sans MS', cursive" font-weight="bold">[Krasnoyarsk]</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LINE 6: PHILOSOPHY
+       ═══════════════════════════════════════════════════════ -->
+  <text x="28" y="151" class="t prompt p6">></text>
+  <g clip-path="url(#c6)">
+    <text x="42" y="151" class="t label">MOTTO:</text>
+    <text x="100" y="151" class="t value" font-style="italic">"Build systems, not just code."</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LINE 7: FINAL STATUS
+       ═══════════════════════════════════════════════════════ -->
+  <text x="28" y="174" class="t prompt p7">></text>
+  <g clip-path="url(#c7)">
+    <text x="42" y="174" class="t label">STATUS:</text>
+    <text x="110" y="174" class="t" fill="#c57e50" font-family="'Comic Sans MS', cursive" font-weight="bold" font-size="14">ALL SYSTEMS NOMINAL</text>
+  </g>
+  <!-- Blinking cursor at end of last line -->
+  <text x="310" y="174" class="t final-cursor" fill="#c57e50" font-family="'Comic Sans MS', cursive" font-weight="bold" font-size="14">_</text>
+
 </svg>
