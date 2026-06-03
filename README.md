@@ -95,7 +95,7 @@ $ skipone --list-contributions
 ```
 
 <div align="center">
-  <a href="https://shkkrit.pro-gen.com.ru">
+  <a href="https://shkkrit.skipone.dev">
     <img src="https://img.shields.io/badge/01_SHKKRIT-College_Timetable_Platform-ff3333?style=for-the-badge&labelColor=0d1117" alt="SHKKRIT" />
   </a>
   &nbsp;
