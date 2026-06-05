@@ -295,7 +295,7 @@
   <text x="28" y="128" class="t prompt p5">></text>
   <g clip-path="url(#c5)">
     <text x="42" y="128" class="t label">LOCATION:</text>
-    <text x="134" y="128" class="t value">56.0914°N  92.8932°E</text>
+    <text x="134" y="128" class="t value">56°0017"N 92°5224"E</text>
     <text x="350" y="128" class="t" fill="#c57e50" opacity="0.6" font-family="'Comic Sans MS', cursive" font-weight="bold">[Krasnoyarsk]</text>
   </g>
 
