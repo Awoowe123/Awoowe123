@@ -33,55 +33,38 @@
 
 <h3>✦ Featured Projects</h3>
 
-<table>
-  <tr>
-    <td width="50%">
-      <a href="https://eduklass.ru">
-        <img src="assets/card-eduklass.svg" width="100%" alt="[01] EduKlass Schedule — college timetable platform, in production" />
-      </a>
-    </td>
-    <td width="50%">
-      <a href="https://kvestnik.ru">
-        <img src="assets/card-kvestnik.svg" width="100%" alt="[02] Kvestnik — real-time classroom games, in production" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <a href="https://github.com/Awoowe123/SkipOneAI">
-        <img src="assets/card-skiponeai.svg" width="100%" alt="[03] SkipOneAI — agentic Telegram twin, source open" />
-      </a>
-    </td>
-    <td width="50%">
-      <a href="https://kvcg.ru">
-        <img src="assets/card-kvcg.svg" width="100%" alt="[04] KVCG — site for a construction company, in production" />
-      </a>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <a href="https://eduklass.ru">
+    <img src="assets/card-eduklass.svg" width="48%" alt="[01] EduKlass Schedule — college timetable platform, in production" />
+  </a>
+  <a href="https://kvestnik.ru">
+    <img src="assets/card-kvestnik.svg" width="48%" alt="[02] Kvestnik — real-time classroom games, in production" />
+  </a>
+  <br />
+  <a href="https://github.com/Awoowe123/SkipOneAI">
+    <img src="assets/card-skiponeai.svg" width="48%" alt="[03] SkipOneAI — agentic Telegram twin, source open" />
+  </a>
+  <a href="https://kvcg.ru">
+    <img src="assets/card-kvcg.svg" width="48%" alt="[04] KVCG — site for a construction company, in production" />
+  </a>
+</div>
 
 <div align="center">
+  <br />
   <a href="https://skipone.dev">
     <img src="assets/chip-site.svg" width="300" alt="skipone.dev — projects and write-ups" />
   </a>
   <br />
   <sub>the full list, the write-ups and how the failover actually behaves</sub>
+  <br /><br />
 </div>
 
 <h4>✦ Handed over to me, in development</h4>
 
-<table>
-  <tr>
-    <td width="50%">
-      <img src="assets/card-chronos.svg" width="100%" alt="[M1] ChronOS-Web — college attendance tracking, handed to me at my request, in development" />
-    </td>
-    <td width="50%">
-      <img src="assets/card-chronos-mobile.svg" width="100%" alt="[M2] chronos-mobile — the mobile client for the same system, in development" />
-    </td>
-  </tr>
-</table>
-
 <div align="center">
+  <img src="assets/card-chronos.svg" width="48%" alt="[M1] ChronOS-Web — college attendance tracking, handed to me at my request, in development" />
+  <img src="assets/card-chronos-mobile.svg" width="48%" alt="[M2] chronos-mobile — the mobile client for the same system, in development" />
+  <br />
   <sub>Closed circuit, shown on request.</sub>
 </div>
 

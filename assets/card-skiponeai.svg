@@ -40,7 +40,7 @@
         stroke="#1e1e1e" stroke-width="1" opacity="0.14" filter="url(#pencil)"/>
     <text x="24" y="154" font-family="'Inter', system-ui, sans-serif" font-size="8.5" font-weight="600"
           letter-spacing="1.6" fill="#a86134">SOURCE OPEN</text>
-    <text x="416" y="154" text-anchor="end" font-family="${UI}" font-size="8.5"
-          letter-spacing="1.2" fill="${MUTED}">${esc("OPEN ->")}</text>
+    <text x="416" y="154" text-anchor="end" font-family="'Inter', system-ui, sans-serif" font-size="8.5"
+          letter-spacing="1.2" fill="#7e7a72">OPEN -&gt;</text>
   </g>
 </svg>

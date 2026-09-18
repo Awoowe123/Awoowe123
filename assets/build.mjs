@@ -223,8 +223,8 @@ ${rule(24, 62, 416, { color: numColor, opacity: c.muted ? 0.3 : 0.45, width: 1.6
 ${rule(24, 136, 416, { opacity: 0.14 })}
     <text x="24" y="154" font-family="${UI}" font-size="8.5" font-weight="600"
           letter-spacing="1.6" fill="${statusColor}">${esc(c.status)}</text>
-${c.linked === false ? "" : `    <text x="416" y="154" text-anchor="end" font-family="\${UI}" font-size="8.5"
-          letter-spacing="1.2" fill="\${MUTED}">\${esc("OPEN ->")}</text>`}
+${c.linked === false ? "" : `    <text x="416" y="154" text-anchor="end" font-family="${UI}" font-size="8.5"
+          letter-spacing="1.2" fill="${MUTED}">${esc("OPEN ->")}</text>`}
   </g>`
   );
 }
